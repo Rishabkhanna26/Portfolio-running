@@ -4,31 +4,40 @@ import { useInView } from '../../hooks/useInView';
 
 const projects = [
   {
+    title: 'Right IAS',
+    description: 'Complete educational platform for IAS exam preparation featuring course management, online tests, study materials, and student progress tracking with an intuitive user interface.',
+    tags: ['WordPress', 'PHP', 'MySQL', 'JavaScript'],
+    icon: Code,
+    gradient: 'from-blue-500 to-cyan-500',
+    github: null,
+    live: 'https://rightias.com/'
+  },
+  {
+    title: 'Asvin Trading',
+    description: 'Professional corporate website for a trading company with dynamic content management, product showcases, inquiry forms, and responsive design optimized for business operations.',
+    tags: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
+    icon: Zap,
+    gradient: 'from-emerald-500 to-teal-500',
+    github: null,
+    live: 'https://asvinttrading.com/'
+  },
+  {
+    title: 'Indus Valley Builders',
+    description: 'Modern construction company website featuring project portfolios, service listings, contact management, and gallery integration with a clean, professional UK-focused design.',
+    tags: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
+    icon: Palette,
+    gradient: 'from-orange-500 to-red-500',
+    github: null,
+    live: 'https://indusvalleybuilders.co.uk/'
+  },
+  {
     title: 'E-Commerce Plugin Suite',
     description: 'Custom WordPress plugin for advanced e-commerce functionality including payment gateway integration, inventory management, and order tracking.',
     tags: ['WordPress', 'PHP', 'MySQL', 'AJAX'],
     icon: Code,
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-violet-500 to-blue-500',
     github: 'https://github.com/rishabkhanna26',
-    live: '#'
-  },
-  {
-    title: 'API Integration Framework',
-    description: 'Robust framework for integrating third-party APIs with WordPress, featuring caching, error handling, and rate limiting.',
-    tags: ['PHP', 'REST API', 'WordPress', 'JavaScript'],
-    icon: Zap,
-    gradient: 'from-purple-500 to-pink-500',
-    github: 'https://github.com/rishabkhanna26',
-    live: '#'
-  },
-  {
-    title: 'Custom Theme Builder',
-    description: 'Flexible WordPress theme builder with drag-and-drop functionality, responsive design options, and performance optimization.',
-    tags: ['WordPress', 'JavaScript', 'Tailwind CSS', 'PHP'],
-    icon: Palette,
-    gradient: 'from-orange-500 to-red-500',
-    github: 'https://github.com/rishabkhanna26',
-    live: '#'
+    live: null
   },
   {
     title: 'Performance Optimizer',
@@ -37,25 +46,16 @@ const projects = [
     icon: Zap,
     gradient: 'from-green-500 to-emerald-500',
     github: 'https://github.com/rishabkhanna26',
-    live: '#'
+    live: null
   },
   {
     title: 'Booking Management System',
     description: 'Complete booking and reservation system with calendar integration, email notifications, and payment processing.',
     tags: ['WordPress', 'PHP', 'JavaScript', 'MySQL'],
     icon: Code,
-    gradient: 'from-indigo-500 to-blue-500',
-    github: 'https://github.com/rishabkhanna26',
-    live: '#'
-  },
-  {
-    title: 'Analytics Dashboard',
-    description: 'Custom analytics dashboard for WordPress with real-time data visualization, custom reports, and export functionality.',
-    tags: ['JavaScript', 'PHP', 'WordPress', 'Chart.js'],
-    icon: Palette,
     gradient: 'from-pink-500 to-rose-500',
     github: 'https://github.com/rishabkhanna26',
-    live: '#'
+    live: null
   }
 ];
 
@@ -113,26 +113,30 @@ export default function Projects() {
                     </div>
 
                     <div className="flex gap-4 pt-4 border-t border-slate-100">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors"
-                        aria-label="View on GitHub"
-                      >
-                        <Github size={18} />
-                        <span className="text-sm font-medium">Code</span>
-                      </a>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors"
-                        aria-label="View Live Demo"
-                      >
-                        <ExternalLink size={18} />
-                        <span className="text-sm font-medium">Demo</span>
-                      </a>
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors"
+                          aria-label="View on GitHub"
+                        >
+                          <Github size={18} />
+                          <span className="text-sm font-medium">Code</span>
+                        </a>
+                      )}
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors"
+                          aria-label="View Live Site"
+                        >
+                          <ExternalLink size={18} />
+                          <span className="text-sm font-medium">Visit Site</span>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
