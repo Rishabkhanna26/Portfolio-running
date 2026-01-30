@@ -15,8 +15,8 @@ export default function Hero() {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-fade-in">
-            <div 
-              className="relative w-64 h-64 mx-auto mb-6 rounded-full bg-gradient-to-br from-amber-500 via-rose-500 to-purple-600 p-1 shadow-2xl shadow-purple-500/50 transition-all duration-300 ease-out overflow-hidden"
+            <div
+              className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto mb-6 rounded-full bg-gradient-to-br from-amber-500 via-rose-500 to-purple-600 p-1 shadow-2xl shadow-purple-500/50 transition-all duration-300 ease-out overflow-hidden"
               style={{
                 transform: `scale(${1 - scrollProgress * 0.5}) translate(${scrollProgress * -50}%, ${scrollProgress * -50}%)`,
                 opacity: Math.max(1 - scrollProgress * 1.5, 0),
