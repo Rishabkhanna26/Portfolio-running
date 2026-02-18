@@ -1,10 +1,42 @@
 "use client";
+import { useEffect, useState } from 'react';
 import { Github, Linkedin, Twitter, Instagram, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 
+const greetings = [
+  'Hello',
+  'नमस्ते',
+  'ਸਤ ਸ੍ਰੀ ਅਕਾਲ',
+  'வணக்கம்',
+  'নমস্কার',
+  'કેમ છો',
+  'ನಮಸ್ಕಾರ',
+  'नमस्कार',
+  'നമസ്കാരം',
+  '你好',
+  'Hola',
+  'Bonjour',
+  'Hallo',
+  'Ciao',
+  'Olá',
+  'こんにちは',
+  '안녕하세요',
+  'Привет',
+  'Merhaba'
+];
+
 export default function Hero() {
   const { scrollProgress, isAtTop } = useScrollPosition();
+  const [greetingIndex, setGreetingIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setGreetingIndex((prev) => (prev + 1) % greetings.length);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
@@ -23,14 +55,20 @@ export default function Hero() {
               }}
             >
               <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden animate-float">
-                <Image 
-                  src="/propic.jpg" 
-                  alt="Rishab Khanna" 
-                  width={400} 
-                  height={400} 
+                <Image
+                  src="/propic.jpg"
+                  alt="Rishab Khanna"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+
+            <div className="h-10 flex items-center justify-center">
+              <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-amber-300 via-rose-300 to-purple-300 bg-clip-text text-transparent transition-all duration-300">
+                {greetings[greetingIndex]}
+              </p>
             </div>
           </div>
 

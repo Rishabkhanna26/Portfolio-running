@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
         <PageLoader />
         {/* Client-side analytics (gtag) */}
         <Analytics />
