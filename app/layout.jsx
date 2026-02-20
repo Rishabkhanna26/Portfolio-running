@@ -4,7 +4,10 @@ import Analytics from '@/app/components/Analytics'
 
 export const metadata = {
   title: 'RISHAB Portfolio',
-  description: 'Rebuilt Next.js App Router project'
+  description: 'Rebuilt Next.js App Router project',
+  verification: {
+    google: 'QvkOwLGubR6qEoYYAaQ60xCjD5GBvLgVTefAeqVFr40'
+  }
 }
 
 export default function RootLayout({ children }) {
