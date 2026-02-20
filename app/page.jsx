@@ -1,6 +1,3 @@
-import dynamic from 'next/dynamic';
-
-// Import components (they will be created as .jsx in src/components)
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -9,6 +6,11 @@ import Services from './components/Services';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+export const metadata = {
+  title: 'Rishab Khanna | WhatsApp Automation and AI Chatbot Developer',
+  description: 'Portfolio and service hub for WhatsApp automation, AI chatbot development, and lead generation systems for growing businesses.'
+};
 
 export default function Home() {
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import * as Icons from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -25,21 +26,21 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <nav className="space-y-2">
-                <a href="#home" className="block text-slate-400 hover:text-white transition-colors">
+                <Link href="/#home" className="block text-slate-400 hover:text-white transition-colors">
                   Home
-                </a>
-                <a href="#skills" className="block text-slate-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/#skills" className="block text-slate-400 hover:text-white transition-colors">
                   Skills
-                </a>
-                <a href="#experience" className="block text-slate-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/#experience" className="block text-slate-400 hover:text-white transition-colors">
                   Experience
-                </a>
-                <a href="#projects" className="block text-slate-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/#projects" className="block text-slate-400 hover:text-white transition-colors">
                   Projects
-                </a>
-                <a href="#contact" className="block text-slate-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/#contact" className="block text-slate-400 hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </nav>
             </div>
 

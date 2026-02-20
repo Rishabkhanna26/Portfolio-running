@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
@@ -30,7 +31,7 @@ function useScrollPosition() {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { scrollProgress, isAtTop } = useScrollPosition();
+  useScrollPosition();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,22 +43,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#services', label: 'Services' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' }
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/automation-product', label: 'Automation Product' },
+    { href: '/contact', label: 'Contact' }
   ];
-
-  const handleNavClick = (e, href) => {
-    e.preventDefault();
-    setIsOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <nav
@@ -69,9 +60,8 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 relative">
-          <a
-            href="#home"
-            onClick={(e) => handleNavClick(e, '#home')}
+          <Link
+            href="/"
             className={`flex items-center transition-all duration-300 ${
               scrolled ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
             }`}
@@ -95,18 +85,17 @@ export default function Navbar() {
                 <span className="text-xs text-slate-400">Web Developer</span>
               </div>
             </div>
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-white hover:text-amber-400 transition-colors font-medium"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -125,14 +114,14 @@ export default function Navbar() {
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  onClick={() => setIsOpen(false)}
                   className="text-white hover:text-amber-400 transition-colors font-medium py-2"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import * as Icons from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 
@@ -122,24 +123,24 @@ export default function Contact() {
                   Quick Links
                 </h4>
                 <div className="space-y-2">
-                  <a
-                    href="#skills"
+                  <Link
+                    href="/#skills"
                     className="block text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     View Skills
-                  </a>
-                  <a
-                    href="#experience"
+                  </Link>
+                  <Link
+                    href="/#experience"
                     className="block text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     Experience
-                  </a>
-                  <a
-                    href="#projects"
+                  </Link>
+                  <Link
+                    href="/#projects"
                     className="block text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     Projects
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

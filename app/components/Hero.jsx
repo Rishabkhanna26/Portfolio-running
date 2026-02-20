@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Github, Linkedin, Twitter, Instagram, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 
 const greetings = [
@@ -91,18 +92,18 @@ export default function Hero() {
           </p>
 
           <div className="flex justify-center gap-4 mb-12 animate-slide-up animation-delay-500">
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="px-8 py-3 bg-gradient-to-r from-purple-600 to-rose-600 hover:from-purple-500 hover:to-rose-500 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
             >
               Get In Touch
-            </a>
-            <a
-              href="#projects"
+            </Link>
+            <Link
+              href="/#projects"
               className="px-8 py-3 border-2 border-amber-600 hover:bg-gradient-to-r hover:from-amber-600 hover:to-rose-600 hover:border-transparent rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
             >
               View Projects
-            </a>
+            </Link>
           </div>
 
           <div className="flex justify-center gap-6 animate-slide-up animation-delay-600">
@@ -154,11 +155,11 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#skills" className="text-slate-400 hover:text-white transition-colors">
+        <Link href="/#skills" className="text-slate-400 hover:text-white transition-colors">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
-        </a>
+        </Link>
       </div>
     </section>
   );

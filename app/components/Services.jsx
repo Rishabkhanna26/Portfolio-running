@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import Link from 'next/link';
 import { Users, Zap, Globe, Palette, Settings, Bot } from 'lucide-react';
 import { useInView } from '../../hooks/useInView';
 
@@ -18,7 +19,8 @@ const services = [
     description: 'Streamline your workflows with intelligent automation solutions that save time and reduce manual tasks across your business.',
     features: ['Workflow Automation', 'Email Sequences', 'Task Scheduling', 'API Integration'],
     color: 'from-amber-600 to-orange-600',
-    delay: 100
+    delay: 100,
+    href: '/services/whatsapp-automation'
   },
   {
     icon: Globe,
@@ -50,7 +52,8 @@ const services = [
     description: 'Automated client management systems that enhance communication, track projects, and improve client satisfaction.',
     features: ['Client Portal', 'Project Tracking', 'Communication Tools', 'Document Management'],
     color: 'from-violet-600 to-purple-600',
-    delay: 500
+    delay: 500,
+    href: '/automation-product'
   }
 ];
 
@@ -150,10 +153,17 @@ export default function Services() {
 
                       {!isClicked && (
                         <div className="mt-6 pt-6 border-t border-slate-700">
-                          <button className="text-sm font-semibold text-purple-400 group-hover:text-amber-400 transition-colors flex items-center gap-2">
-                            Learn More
-                            <span className="transform group-hover:translate-x-2 transition-transform">→</span>
-                          </button>
+                          {service.href ? (
+                            <Link href={service.href} className="text-sm font-semibold text-purple-400 group-hover:text-amber-400 transition-colors flex items-center gap-2">
+                              Learn More
+                              <span className="transform group-hover:translate-x-2 transition-transform">→</span>
+                            </Link>
+                          ) : (
+                            <button className="text-sm font-semibold text-purple-400 group-hover:text-amber-400 transition-colors flex items-center gap-2">
+                              Learn More
+                              <span className="transform group-hover:translate-x-2 transition-transform">→</span>
+                            </button>
+                          )}
                         </div>
                       )}
 
@@ -184,12 +194,12 @@ export default function Services() {
               <p className="text-slate-300 mb-4 text-lg">
                 Need something custom?
               </p>
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-amber-600 to-rose-600 hover:from-purple-500 hover:via-amber-500 hover:to-rose-500 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/50"
               >
                 Let's Discuss Your Project
-              </a>
+              </Link>
             </div>
           </div>
         </div>
