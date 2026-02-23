@@ -45,7 +45,7 @@ export default function Hero() {
 
 
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-20 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-fade-in">
             <div
@@ -73,7 +73,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-slide-up">
+          <h1 className="break-words text-4xl font-bold mb-4 animate-slide-up sm:text-5xl md:text-7xl">
            Rishab Khanna
           </h1>
 
@@ -91,16 +91,16 @@ export default function Hero() {
             Expertise in WordPress, PHP, JavaScript, and modern web technologies.
           </p>
 
-          <div className="flex justify-center gap-4 mb-12 animate-slide-up animation-delay-500">
+          <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up animation-delay-500">
             <Link
               href="/#contact"
-              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-rose-600 hover:from-purple-500 hover:to-rose-500 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
+              className="inline-flex min-h-12 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-rose-600 px-8 py-3 text-base font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
             >
               Get In Touch
             </Link>
             <Link
               href="/#projects"
-              className="px-8 py-3 border-2 border-amber-600 hover:bg-gradient-to-r hover:from-amber-600 hover:to-rose-600 hover:border-transparent rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
+              className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-amber-600 px-8 py-3 text-base font-semibold transition-all duration-300 transform hover:bg-gradient-to-r hover:from-amber-600 hover:to-rose-600 hover:border-transparent hover:scale-105"
             >
               View Projects
             </Link>
@@ -111,7 +111,7 @@ export default function Hero() {
               href="https://github.com/rishabkhanna26"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-white"
               aria-label="GitHub"
             >
               <Github size={28} />
@@ -120,7 +120,7 @@ export default function Hero() {
               href="https://linkedin.com/in/rishabkhanna26"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-purple-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-purple-400"
               aria-label="LinkedIn"
             >
               <Linkedin size={28} />
@@ -129,7 +129,7 @@ export default function Hero() {
               href="https://twitter.com/rishabkhanna26"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-amber-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-amber-400"
               aria-label="Twitter"
             >
               <Twitter size={28} />
@@ -138,14 +138,14 @@ export default function Hero() {
               href="https://instagram.com/rishabkhanna26"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-pink-500 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-pink-500"
               aria-label="Instagram"
             >
               <Instagram size={28} />
             </a>
             <a
               href="mailto:rishabkhanna26@gmail.com"
-              className="text-slate-400 hover:text-rose-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-rose-400"
               aria-label="Email"
             >
               <Mail size={28} />
@@ -155,7 +155,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <Link href="/#skills" className="text-slate-400 hover:text-white transition-colors">
+        <Link href="/#skills" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-colors hover:text-white">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>

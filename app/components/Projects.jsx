@@ -101,7 +101,7 @@ export default function Projects() {
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl"></div>
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-amber-500/20 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div ref={ref} className="max-w-7xl mx-auto">
           <div className={`text-center mb-16 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <span className="inline-flex px-4 py-2 rounded-full text-xs font-bold tracking-wider bg-slate-800 border border-slate-700 text-slate-200 mb-4">
@@ -155,7 +155,7 @@ export default function Projects() {
                               </span>
                             </div>
 
-                            <p className="text-sm text-slate-300 leading-relaxed mb-4 min-h-[72px]">
+                            <p className="text-base text-slate-300 leading-relaxed mb-4 min-h-[72px]">
                               {project.description}
                             </p>
 
@@ -176,7 +176,7 @@ export default function Projects() {
                                   href={project.github}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-600 text-slate-200 hover:text-white hover:border-slate-400 transition-colors text-sm font-medium"
+                                  className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-slate-600 px-3 py-2 text-base font-medium text-slate-200 transition-colors hover:border-slate-400 hover:text-white"
                                   aria-label="View on GitHub"
                                 >
                                   <Github size={16} />
@@ -188,7 +188,7 @@ export default function Projects() {
                                   href={project.live}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg text-white bg-gradient-to-r ${group.gradient} hover:opacity-90 transition-opacity text-sm font-medium`}
+                                  className={`inline-flex min-h-11 items-center gap-2 rounded-lg bg-gradient-to-r px-3 py-2 text-base font-medium text-white transition-opacity hover:opacity-90 ${group.gradient}`}
                                   aria-label="View Live Site"
                                 >
                                   <ExternalLink size={16} />

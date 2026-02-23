@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-900 text-white py-12 relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
@@ -26,19 +26,19 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <nav className="space-y-2">
-                <Link href="/#home" className="block text-slate-400 hover:text-white transition-colors">
+                <Link href="/#home" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
                   Home
                 </Link>
-                <Link href="/#skills" className="block text-slate-400 hover:text-white transition-colors">
+                <Link href="/#skills" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
                   Skills
                 </Link>
-                <Link href="/#experience" className="block text-slate-400 hover:text-white transition-colors">
+                <Link href="/#experience" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
                   Experience
                 </Link>
-                <Link href="/#projects" className="block text-slate-400 hover:text-white transition-colors">
+                <Link href="/#projects" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
                   Projects
                 </Link>
-                <Link href="/#contact" className="block text-slate-400 hover:text-white transition-colors">
+                <Link href="/#contact" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
                   Contact
                 </Link>
               </nav>
@@ -51,7 +51,7 @@ export default function Footer() {
                   href="https://github.com/rishabkhanna26"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-white"
                   aria-label="GitHub"
                 >
                   {Icons.Github ? <Icons.Github size={24} /> : <span />}
@@ -60,7 +60,7 @@ export default function Footer() {
                   href="https://linkedin.com/in/rishabkhanna26"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-blue-500"
                   aria-label="LinkedIn"
                 >
                   {Icons.Linkedin ? <Icons.Linkedin size={24} /> : <span />}
@@ -69,7 +69,7 @@ export default function Footer() {
                   href="https://twitter.com/rishabkhanna26"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-blue-400"
                   aria-label="Twitter"
                 >
                   {Icons.Twitter ? <Icons.Twitter size={24} /> : <span />}
@@ -78,7 +78,7 @@ export default function Footer() {
                   href="https://instagram.com/rishabkhanna26"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-pink-500 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-pink-500"
                   aria-label="Instagram"
                 >
                   {Icons.Instagram ? <Icons.Instagram size={24} /> : <span />}
@@ -86,19 +86,19 @@ export default function Footer() {
               </div>
               <a
                 href="mailto:rishabkhanna26@gmail.com"
-                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+                className="inline-flex min-h-11 max-w-full items-center gap-2 break-all text-base text-slate-400 transition-colors hover:text-white"
               >
                 {Icons.Mail ? <Icons.Mail size={18} /> : <span />}
-                <span className="text-sm">rishabkhanna26@gmail.com</span>
+                <span>rishabkhanna26@gmail.com</span>
               </a>
             </div>
           </div>
 
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-400 text-sm flex items-center gap-2">
+            <p className="flex items-center gap-2 text-base text-slate-400">
               Built with {Icons.Heart ? <Icons.Heart size={16} className="text-red-500 animate-pulse" /> : <span />} by Rishab Khanna
             </p>
-            <p className="text-slate-400 text-sm">
+            <p className="text-base text-slate-400">
               © {new Date().getFullYear()} All rights reserved.
             </p>
           </div>

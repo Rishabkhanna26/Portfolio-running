@@ -36,7 +36,7 @@ export default function Skills() {
       <div className="hidden lg:block absolute top-40 right-10 w-72 h-72 bg-amber-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       <div className="hidden lg:block absolute bottom-20 left-1/2 w-72 h-72 bg-rose-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div ref={ref} className="max-w-7xl mx-auto">
           <div className={`text-center mb-16 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-block mb-4">
@@ -59,7 +59,7 @@ export default function Skills() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                className={`min-h-11 rounded-full px-8 py-3 text-base font-semibold transition-all duration-300 transform hover:scale-105 ${
                   activeCategory === category
                     ? 'bg-gradient-to-r from-amber-500 via-rose-500 to-purple-500 text-white shadow-lg shadow-purple-500/50'
                     : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700'
@@ -109,7 +109,7 @@ export default function Skills() {
                     </div>
                   </div>
 
-                  <div className="mt-3 text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                  <div className="mt-3 text-base text-slate-400 group-hover:text-slate-300 transition-colors">
                     {tech.category}
                   </div>
                 </div>

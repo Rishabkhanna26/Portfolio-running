@@ -74,7 +74,7 @@ export default function Services() {
       <div className="hidden lg:block absolute top-20 right-20 w-96 h-96 bg-amber-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       <div className="hidden lg:block absolute bottom-10 left-1/2 w-96 h-96 bg-rose-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div ref={ref} className="max-w-7xl mx-auto">
           <div className={`text-center mb-16 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-block mb-4">
@@ -131,7 +131,7 @@ export default function Services() {
                         {service.title}
                       </h3>
 
-                      <p className="text-slate-300 leading-relaxed mb-6 group-hover:text-slate-200 transition-colors">
+                      <p className="text-base text-slate-300 leading-relaxed mb-6 group-hover:text-slate-200 transition-colors">
                         {service.description}
                       </p>
 
@@ -142,7 +142,7 @@ export default function Services() {
                         {service.features.map((feature, i) => (
                           <div
                             key={i}
-                            className="flex items-center gap-3 text-sm transition-all duration-300"
+                            className="flex items-center gap-3 text-base transition-all duration-300"
                             style={{ transitionDelay: `${i * 50}ms` }}
                           >
                             <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
@@ -154,12 +154,12 @@ export default function Services() {
                       {!isClicked && (
                         <div className="mt-6 pt-6 border-t border-slate-700">
                           {service.href ? (
-                            <Link href={service.href} className="text-sm font-semibold text-purple-400 group-hover:text-amber-400 transition-colors flex items-center gap-2">
+                            <Link href={service.href} className="inline-flex min-h-11 items-center gap-2 text-base font-semibold text-purple-400 transition-colors group-hover:text-amber-400">
                               Learn More
                               <span className="transform group-hover:translate-x-2 transition-transform">→</span>
                             </Link>
                           ) : (
-                            <button className="text-sm font-semibold text-purple-400 group-hover:text-amber-400 transition-colors flex items-center gap-2">
+                            <button className="inline-flex min-h-11 items-center gap-2 text-base font-semibold text-purple-400 transition-colors group-hover:text-amber-400">
                               Learn More
                               <span className="transform group-hover:translate-x-2 transition-transform">→</span>
                             </button>
@@ -196,7 +196,7 @@ export default function Services() {
               </p>
               <Link
                 href="/#contact"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-amber-600 to-rose-600 hover:from-purple-500 hover:via-amber-500 hover:to-rose-500 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/50"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-amber-600 to-rose-600 px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:from-purple-500 hover:via-amber-500 hover:to-rose-500 shadow-lg hover:shadow-purple-500/50"
               >
                 Let's Discuss Your Project
               </Link>

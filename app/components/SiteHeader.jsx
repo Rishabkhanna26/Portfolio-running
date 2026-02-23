@@ -35,7 +35,7 @@ export default function SiteHeader() {
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex items-center justify-center rounded-lg border border-slate-700 p-2 text-slate-200 md:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-slate-700 p-2.5 text-slate-200 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 md:hidden"
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
         >
@@ -47,7 +47,7 @@ export default function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              className={`inline-flex min-h-10 items-center rounded-lg px-3 py-2 text-base font-medium transition-colors ${
                 isActive(pathname, link.href)
                   ? 'bg-slate-800 text-white'
                   : 'text-slate-300 hover:bg-slate-900 hover:text-white'
@@ -67,7 +67,7 @@ export default function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                className={`block min-h-11 w-full rounded-lg px-3 py-3 text-base font-medium leading-6 transition-colors ${
                   isActive(pathname, link.href)
                     ? 'bg-slate-800 text-white'
                     : 'text-slate-300 hover:bg-slate-900 hover:text-white'

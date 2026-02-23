@@ -58,7 +58,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 relative">
           <Link
             href="/"
@@ -82,7 +82,7 @@ export default function Navbar() {
                 <span className="text-lg font-bold bg-gradient-to-r from-amber-400 to-purple-400 bg-clip-text text-transparent">
                   Rishab Khanna
                 </span>
-                <span className="text-xs text-slate-400">Web Developer</span>
+                <span className="text-sm text-slate-400">Web Developer</span>
               </div>
             </div>
           </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white hover:text-amber-400 transition-colors"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-white transition-colors hover:text-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 md:hidden"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -111,14 +111,14 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="md:hidden bg-slate-900/98 backdrop-blur-sm border-t border-slate-800 animate-slide-down">
-          <div className="container mx-auto px-6 py-4">
+          <div className="container mx-auto px-4 py-4 sm:px-6">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-white hover:text-amber-400 transition-colors font-medium py-2"
+                  className="inline-flex min-h-11 items-center text-base font-medium text-white transition-colors hover:text-amber-400"
                 >
                   {link.label}
                 </Link>

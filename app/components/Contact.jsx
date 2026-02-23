@@ -62,7 +62,7 @@ export default function Contact() {
       id="contact"
       className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div ref={ref} className="max-w-5xl mx-auto">
           <div
             className={`text-center mb-16 transition-all duration-1000 ${
@@ -98,7 +98,7 @@ export default function Contact() {
                     <h4 className="font-semibold mb-1 text-slate-200">Email</h4>
                     <a
                       href="mailto:rishabkhanna26@gmail.com"
-                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      className="inline-flex min-h-11 max-w-full items-center break-all text-base text-blue-400 transition-colors hover:text-blue-300"
                     >
                       rishabkhanna26@gmail.com
                     </a>
@@ -125,19 +125,19 @@ export default function Contact() {
                 <div className="space-y-2">
                   <Link
                     href="/#skills"
-                    className="block text-blue-400 hover:text-blue-300 transition-colors"
+                    className="inline-flex min-h-11 items-center text-base text-blue-400 transition-colors hover:text-blue-300"
                   >
                     View Skills
                   </Link>
                   <Link
                     href="/#experience"
-                    className="block text-blue-400 hover:text-blue-300 transition-colors"
+                    className="inline-flex min-h-11 items-center text-base text-blue-400 transition-colors hover:text-blue-300"
                   >
                     Experience
                   </Link>
                   <Link
                     href="/#projects"
-                    className="block text-blue-400 hover:text-blue-300 transition-colors"
+                    className="inline-flex min-h-11 items-center text-base text-blue-400 transition-colors hover:text-blue-300"
                   >
                     Projects
                   </Link>
@@ -157,7 +157,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-slate-300 mb-2"
+                    className="mb-2 block text-base font-medium text-slate-300"
                   >
                     Your Name
                   </label>
@@ -168,7 +168,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-white placeholder-slate-500"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                     placeholder="John Doe"
                   />
                 </div>
@@ -176,7 +176,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-slate-300 mb-2"
+                    className="mb-2 block text-base font-medium text-slate-300"
                   >
                     Your Email
                   </label>
@@ -187,7 +187,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-white placeholder-slate-500"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -195,7 +195,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-slate-300 mb-2"
+                    className="mb-2 block text-base font-medium text-slate-300"
                   >
                     Message
                   </label>
@@ -206,7 +206,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-white placeholder-slate-500 resize-none"
+                    className="w-full resize-none rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -214,7 +214,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitted || isLoading}
-                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/50 disabled:cursor-not-allowed disabled:opacity-50 disabled:transform-none"
                 >
                   {isLoading ? (
                     <>
@@ -236,7 +236,7 @@ export default function Contact() {
 
                 {error && (
                   <div className="p-4 bg-red-600/20 border border-red-500/50 rounded-lg text-red-300">
-                    <p className="text-sm font-medium">{error}</p>
+                    <p className="text-base font-medium">{error}</p>
                   </div>
                 )}
                 </form>
