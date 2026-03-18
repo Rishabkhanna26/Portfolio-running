@@ -4,89 +4,75 @@ import { useInView } from '../../hooks/useInView';
 
 const projectGroups = [
   {
-    title: 'WordPress Projects',
-    description: 'Custom WordPress builds, plugin engineering, and business-ready websites.',
+    title: 'Automation & SaaS',
+    description: 'Product builds focused on automation, chat, and workflow intelligence.',
     gradient: 'from-emerald-500 to-teal-500',
-    icon: Settings,
+    icon: Bot,
     projects: [
       {
-        title: 'Right IAS',
-        description: 'Educational platform with courses, tests, study material, and student progress tracking.',
-        tags: ['WordPress', 'PHP', 'MySQL', 'JavaScript'],
-        github: null,
-        live: 'https://rightias.com/'
+        title: 'AlgoChat',
+        description: 'AI chatbot product with billing flow, status handling, and real-time notifications.',
+        tags: ['Next.js', 'SaaS', 'AI', 'Automation'],
+        github: 'https://github.com/Rishabkhanna26/Algochat',
+        live: 'https://algoochat.vercel.app'
       },
       {
-        title: 'Asvin Trading',
-        description: 'Corporate trading website with product showcases, enquiry flow, and responsive UI.',
-        tags: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
-        github: null,
-        live: 'https://asvinttrading.com/'
+        title: 'Algoaura Lead Generation Hub',
+        description: 'Lead capture and conversion workflow hub tailored for service businesses.',
+        tags: ['Next.js', 'Lead Gen', 'Automation'],
+        github: 'https://github.com/Rishabkhanna26/algoaura-lead-generation-hub',
+        live: 'https://algoaura.in'
       },
       {
-        title: 'Indus Valley Builders',
-        description: 'Construction website with portfolio pages, service content, and contact capture.',
-        tags: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
-        github: null,
-        live: 'https://indusvalleybuilders.co.uk/'
-      },
-      {
-        title: 'E-Commerce Plugin Suite',
-        description: 'Custom plugin for payment gateway integration, inventory handling, and order workflows.',
-        tags: ['WordPress', 'PHP', 'MySQL', 'AJAX'],
-        github: 'https://github.com/rishabkhanna26',
-        live: null
-      },
-      {
-        title: 'Performance Optimizer',
-        description: 'Plugin focused on caching, query optimization, and asset-level performance tuning.',
-        tags: ['PHP', 'MySQL', 'WordPress', 'Performance'],
-        github: 'https://github.com/rishabkhanna26',
-        live: null
-      },
-      {
-        title: 'Booking Management System',
-        description: 'Booking and reservation solution with calendar sync, emails, and payment processing.',
-        tags: ['WordPress', 'PHP', 'JavaScript', 'MySQL'],
-        github: 'https://github.com/rishabkhanna26',
-        live: null
+        title: 'Client Mixend',
+        description: 'Client handling dashboard with secure access, task flows, and operational tracking.',
+        tags: ['Next.js', 'Dashboard', 'Security'],
+        github: 'https://github.com/Rishabkhanna26/Client-Mixend',
+        live: 'https://client-handler.vercel.app'
       }
     ]
   },
   {
-    title: 'Next.js Projects',
-    description: 'Fast and modern products built with Next.js and scalable UI architecture.',
+    title: 'Brand & Marketing Sites',
+    description: 'High-conversion web experiences for product and service brands.',
     gradient: 'from-purple-500 to-rose-500',
     icon: Globe,
     projects: [
       {
         title: 'Araba Cafe',
-        description: 'Premium coffee brand site that merges cafe and automotive themes, with menu, drive-in experience, gallery, franchise, and contact pages.',
+        description: 'Brand site for a cafe concept with immersive storytelling and menu discovery.',
         tags: ['Next.js', 'React', 'Tailwind'],
-        github: null,
-        live: 'https://araba-cafe.vercel.app/'
+        github: 'https://github.com/Rishabkhanna26/araba',
+        live: 'https://cafecofee.vercel.app'
       },
       {
-        title: 'Pahadam',
-        description: 'Organic Himalayan ghee brand website with story-led landing, product catalog, trust sections, testimonials, and clear shop-focused conversion flow.',
+        title: 'Pahadam Ascent',
+        description: 'Organic ghee brand experience with story-led landing, trust signals, and conversion flow.',
         tags: ['Next.js', 'React', 'Frontend'],
-        github: null,
-        live: 'https://pahadam.vercel.app/'
+        github: 'https://github.com/Rishabkhanna26/pahadam-ascent',
+        live: 'https://apnaghee.vercel.app'
+      },
+      {
+        title: 'Digital Pulse',
+        description: 'Digital agency site focused on growth services, offers, and inquiry capture.',
+        tags: ['Next.js', 'Marketing', 'UI'],
+        github: 'https://github.com/Rishabkhanna26/DigitalPulse',
+        live: 'https://grow-media-jal.vercel.app'
       }
     ]
   },
   {
-    title: 'Automation & Dashboard',
-    description: 'Workflow tools and dashboard systems for better client operations and tracking.',
+    title: 'Portfolio & Showcase',
+    description: 'Personal portfolio and showcase experience with custom visual storytelling.',
     gradient: 'from-amber-500 to-orange-500',
-    icon: Bot,
+    icon: Settings,
     projects: [
       {
-        title: 'Client Handler',
-        description: 'Automation and dashboard platform for client handling, task visibility, and process tracking.',
-        tags: ['Automation', 'Dashboard', 'Client Management'],
-        github: null,
-        live: 'https://client-handler.vercel.app/login'
+        title: 'Portfolio Running',
+        description: 'Personal portfolio site featuring projects, services, and conversion-focused sections.',
+        tags: ['Next.js', 'Portfolio', 'Brand'],
+        github: 'https://github.com/Rishabkhanna26/Portfolio-running',
+        live: 'https://rishabkhanna26.vercel.app'
       }
     ]
   }

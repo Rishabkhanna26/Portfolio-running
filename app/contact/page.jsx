@@ -15,7 +15,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <MarketingShell>
-      <section className="px-4 py-10 sm:px-6 sm:py-16">
+      <section className="futuristic-hero px-4 py-10 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-4xl">
           <h1 className="break-words text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             Contact me to build your automation workflow.

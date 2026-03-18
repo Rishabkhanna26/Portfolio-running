@@ -22,7 +22,7 @@ const productFeatures = [
 export default function AutomationProductPage() {
   return (
     <MarketingShell>
-      <section className="px-4 py-10 sm:px-6 sm:py-16">
+      <section className="futuristic-hero px-4 py-10 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-4xl">
           <p className="inline-flex rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-300">
             Automation Product

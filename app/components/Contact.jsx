@@ -6,6 +6,8 @@ import * as Icons from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 
 export default function Contact() {
+  const calendlyMeetingUrl =
+    "https://calendly.com/rishabkhanna26/new-meeting/invitees";
   const [ref, isInView] = useInView({ threshold: 0.1 });
   const [formData, setFormData] = useState({
     name: "",
@@ -114,6 +116,25 @@ export default function Contact() {
                       Location
                     </h4>
                     <p className="text-slate-300">Jalandhar, Punjab, India</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    {Icons.Calendar ? <Icons.Calendar size={24} /> : <span />}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1 text-slate-200">
+                      Direct 1:1 Meeting
+                    </h4>
+                    <a
+                      href={calendlyMeetingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-11 items-center text-base text-blue-400 transition-colors hover:text-blue-300"
+                    >
+                      Book a direct meeting on Calendly
+                    </a>
                   </div>
                 </div>
               </div>

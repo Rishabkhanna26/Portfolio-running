@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --future-bg-base: #020617;
+  --future-glow-cyan: 34, 211, 238;
+  --future-glow-blue: 59, 130, 246;
+  --future-glow-emerald: 16, 185, 129;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -15,6 +22,8 @@
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
+    background-color: var(--future-bg-base);
+    color: rgb(226 232 240);
   }
 
   input,
@@ -114,6 +123,91 @@
       linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
+  }
+
+  .site-page-shell {
+    position: relative;
+    isolation: isolate;
+    background-color: var(--future-bg-base);
+    background-image:
+      radial-gradient(circle at 5% 10%, rgba(var(--future-glow-cyan), 0.18), transparent 34%),
+      radial-gradient(circle at 92% 16%, rgba(var(--future-glow-blue), 0.16), transparent 30%),
+      radial-gradient(circle at 58% 100%, rgba(var(--future-glow-emerald), 0.12), transparent 34%),
+      linear-gradient(140deg, #020617 0%, #0b1120 45%, #020617 100%);
+  }
+
+  .site-page-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.22;
+    background-image:
+      linear-gradient(to right, rgba(148, 163, 184, 0.22) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.18) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(circle at center, black 18%, transparent 85%);
+  }
+
+  .site-page-shell::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    top: -12rem;
+    left: -8rem;
+    width: 36rem;
+    height: 36rem;
+    background: radial-gradient(circle, rgba(var(--future-glow-cyan), 0.2) 0%, transparent 70%);
+    filter: blur(16px);
+  }
+
+  .site-page-shell > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .futuristic-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+    background-image:
+      radial-gradient(circle at 8% 10%, rgba(var(--future-glow-cyan), 0.2), transparent 32%),
+      radial-gradient(circle at 92% 18%, rgba(var(--future-glow-blue), 0.22), transparent 30%),
+      linear-gradient(135deg, rgba(2, 6, 23, 0.92) 0%, rgba(15, 23, 42, 0.84) 52%, rgba(2, 6, 23, 0.94) 100%);
+  }
+
+  .futuristic-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.26;
+    background-image:
+      linear-gradient(to right, rgba(56, 189, 248, 0.22) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+    background-size: 52px 52px;
+    mask-image: linear-gradient(to bottom, black 0%, black 72%, transparent 100%);
+  }
+
+  .futuristic-hero::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    inset: auto auto -40% 12%;
+    width: 70%;
+    height: 110%;
+    background: radial-gradient(circle, rgba(var(--future-glow-emerald), 0.22) 0%, transparent 68%);
+    filter: blur(32px);
+  }
+
+  .futuristic-hero > * {
+    position: relative;
+    z-index: 1;
   }
 }
 

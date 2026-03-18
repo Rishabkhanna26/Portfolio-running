@@ -4,34 +4,9 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
-// useScrollPosition hook - inline
-function useScrollPosition() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isAtTop, setIsAtTop] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const position = window.scrollY;
-      const heroHeight = window.innerHeight;
-      setScrollPosition(Math.min(position / heroHeight, 1));
-      setIsAtTop(position < heroHeight);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  return { scrollProgress: scrollPosition, isAtTop };
-}
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  useScrollPosition();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,19 +27,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg border-b border-slate-800/70'
+          : 'bg-slate-950/70 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 relative">
           <Link
             href="/"
-            className={`flex items-center transition-all duration-300 ${
-              scrolled ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
-            }`}
+            className="flex items-center transition-all duration-300"
           >
             <div className="flex items-center">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 via-rose-500 to-purple-600 p-0.5 shadow-lg overflow-hidden transform transition-transform hover:scale-110">
