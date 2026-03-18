@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
@@ -7,13 +7,28 @@ import Image from 'next/image';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastScrollY.current;
+
+      setScrolled(currentScrollY > 50);
+
+      if (currentScrollY <= 0) {
+        setIsHidden(false);
+      } else if (delta > 5 && currentScrollY > 120) {
+        setIsHidden(true);
+      } else if (delta < -5) {
+        setIsHidden(false);
+      }
+
+      lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -27,11 +42,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`site-fixed fixed top-0 left-0 right-0 z-50 transition-transform duration-300 will-change-transform ${
         scrolled
           ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg border-b border-slate-800/70'
           : 'bg-slate-950/70 backdrop-blur-sm'
-      }`}
+      } ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 relative">

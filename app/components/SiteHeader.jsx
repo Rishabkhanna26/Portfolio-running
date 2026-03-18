@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
@@ -24,9 +24,35 @@ function isActive(pathname, href) {
 export default function SiteHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastScrollY.current;
+
+      if (currentScrollY <= 0) {
+        setIsHidden(false);
+      } else if (delta > 5 && currentScrollY > 120) {
+        setIsHidden(true);
+      } else if (delta < -5) {
+        setIsHidden(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/70 bg-slate-950/90 backdrop-blur">
+    <header
+      className={`site-fixed fixed top-0 left-0 right-0 z-50 border-b border-slate-800/70 bg-slate-950/90 backdrop-blur transition-transform duration-300 will-change-transform ${
+        isHidden ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="text-base font-bold tracking-tight text-white sm:text-lg">
           Rishab Khanna

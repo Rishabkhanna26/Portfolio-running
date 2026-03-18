@@ -168,6 +168,11 @@
     z-index: 1;
   }
 
+  .site-page-shell > .site-fixed {
+    position: fixed;
+    z-index: 50;
+  }
+
   .futuristic-hero {
     position: relative;
     isolation: isolate;
