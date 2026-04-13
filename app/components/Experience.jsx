@@ -175,12 +175,12 @@ export default function Experience() {
             <div className="inline-flex flex-wrap items-center justify-center gap-8 p-8 bg-gradient-to-br from-white to-purple-50 rounded-3xl shadow-2xl border-2 border-purple-200">
               <div className="text-center">
                 <p className="mb-1 text-base font-semibold text-slate-600">Projects Completed</p>
-                <p className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-rose-600 bg-clip-text text-transparent">30+</p>
+                <p className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-rose-600 bg-clip-text text-transparent">20+</p>
               </div>
               <div className="w-px h-16 bg-gradient-to-b from-transparent via-purple-300 to-transparent hidden sm:block"></div>
               <div className="text-center">
                 <p className="mb-1 text-base font-semibold text-slate-600">On Time Delivery</p>
-                <p className="text-4xl font-bold bg-gradient-to-r from-rose-600 to-amber-600 bg-clip-text text-transparent">95%</p>
+                <p className="text-4xl font-bold bg-gradient-to-r from-rose-600 to-amber-600 bg-clip-text text-transparent">99%</p>
               </div>
               <div className="w-px h-16 bg-gradient-to-b from-transparent via-rose-300 to-transparent hidden sm:block"></div>
               <div className="text-center">

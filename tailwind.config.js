@@ -7,7 +7,11 @@ module.exports = {
     './pages/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xxs: { max: '330px' },
+      },
+    },
   },
   safelist: [
     // color and gradient utilities built dynamically in components

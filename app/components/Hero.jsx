@@ -40,18 +40,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="futuristic-hero relative flex min-h-screen items-center justify-center text-white">
+    <section id="home" className="futuristic-hero relative grid min-h-screen w-full place-items-center overflow-x-clip text-white">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-
-
-
-      <div className="container mx-auto px-4 py-20 sm:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="relative z-10 w-full px-4 py-20 sm:px-6">
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
           <div className="mb-8 animate-fade-in">
             <div
               className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto mb-6 rounded-full bg-gradient-to-br from-amber-500 via-rose-500 to-purple-600 p-1 shadow-2xl shadow-purple-500/50 transition-all duration-300 ease-out overflow-hidden"
               style={{
-                transform: `scale(${1 - scrollProgress * 0.5}) translate(${scrollProgress * -50}%, ${scrollProgress * -50}%)`,
+                transform: `translate3d(0, ${scrollProgress * -50}%, 0) scale(${1 - scrollProgress * 0.5})`,
+                transformOrigin: 'center',
                 opacity: Math.max(1 - scrollProgress * 1.5, 0),
               }}
             >
