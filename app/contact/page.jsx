@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import MarketingShell from '../components/MarketingShell';
 import Contact from '../components/Contact';
+import SectionSpacer from '../components/SectionSpacer';
 
 export const metadata = {
   title: 'Contact | Rishab Khanna Automation Services',
@@ -37,6 +38,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <SectionSpacer />
 
       <Contact />
     </MarketingShell>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import MarketingShell from '../components/MarketingShell';
+import SectionSpacer from '../components/SectionSpacer';
 
 const serviceCards = [
   {
@@ -49,6 +50,8 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
+
+      <SectionSpacer />
 
       <section className="px-4 pb-14 sm:px-6 sm:pb-20">
         <div className="mx-auto grid max-w-5xl gap-4 sm:gap-6 md:grid-cols-3">

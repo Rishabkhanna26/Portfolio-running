@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import MarketingShell from './MarketingShell';
+import SectionSpacer from './SectionSpacer';
 
 export default function ServiceDetailPage({
   serviceLabel,
@@ -25,6 +26,8 @@ export default function ServiceDetailPage({
           <p className="mt-5 break-words text-base xxs:text-sm leading-8 text-slate-300 sm:text-lg">{intro}</p>
         </div>
       </section>
+
+      <SectionSpacer />
 
       <section className="px-4 pb-12 sm:px-6 sm:pb-16">
         <div className="mx-auto max-w-4xl rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
