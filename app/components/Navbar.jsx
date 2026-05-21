@@ -54,8 +54,8 @@ export default function Navbar() {
             href="/"
             className="flex items-center transition-all duration-300"
           >
-            <div className="flex items-center">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 via-rose-500 to-purple-600 p-0.5 shadow-lg overflow-hidden transform transition-transform hover:scale-110">
+              <div className="flex items-center">
+              <div className="w-10 h-10 xxs:w-9 xxs:h-9 rounded-full bg-gradient-to-br from-amber-500 via-rose-500 to-purple-600 p-0.5 shadow-lg overflow-hidden transform transition-transform hover:scale-110">
                 <div className="w-full h-full rounded-full overflow-hidden">
                   <Image 
                     src="/propic.jpg" 
@@ -67,10 +67,10 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="ml-3 flex flex-col items-start">
-                <span className="text-lg font-bold bg-gradient-to-r from-amber-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="text-lg xxs:text-base font-bold bg-gradient-to-r from-amber-400 to-purple-400 bg-clip-text text-transparent">
                   Rishab Khanna
                 </span>
-                <span className="text-sm text-slate-400">Web Developer</span>
+                <span className="text-sm xxs:text-xs text-slate-400">Web Developer</span>
               </div>
             </div>
           </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
             className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-white transition-colors hover:text-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 md:hidden"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X className="h-7 w-7 xxs:h-6 xxs:w-6" aria-hidden="true" /> : <Menu className="h-7 w-7 xxs:h-6 xxs:w-6" aria-hidden="true" />}
           </button>
         </div>
       </div>

@@ -215,7 +215,7 @@ export default function Skills() {
   }, [activeSkill, filteredTechnologies]);
 
   return (
-    <section id="skills" className="relative overflow-hidden py-20 text-white">
+    <section id="skills" className="relative overflow-hidden py-20 xxs:py-16 text-white">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950"></div>
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
@@ -231,10 +231,10 @@ export default function Skills() {
                 EXPERTISE
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-amber-400 via-rose-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl xxs:text-3xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-amber-400 via-rose-400 to-purple-400 bg-clip-text text-transparent">
               Technical Skills
             </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            <p className="text-xl xxs:text-lg text-slate-300 max-w-2xl mx-auto">
               Mastering modern technologies to build exceptional digital experiences
             </p>
           </div>
@@ -248,14 +248,14 @@ export default function Skills() {
                   <button
                     key={key}
                     onClick={() => setActiveCategory(key)}
-                    className={`inline-flex min-h-11 items-center gap-2 rounded-full px-5 py-2.5 text-base font-semibold transition-all duration-300 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/80 ${
+                    className={`inline-flex min-h-11 xxs:min-h-10 items-center gap-2 rounded-full px-5 xxs:px-4 py-2.5 xxs:py-2 text-base xxs:text-sm font-semibold transition-all duration-300 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/80 ${
                       activeCategory === key
                         ? 'bg-gradient-to-r from-amber-500 via-rose-500 to-purple-500 text-white shadow-lg shadow-purple-500/40'
                         : 'bg-slate-900/40 text-slate-200 hover:bg-slate-800/50 border border-slate-700/60'
                     }`}
                     aria-pressed={activeCategory === key}
                   >
-                    <Icon size={18} className="opacity-90" />
+                    <Icon className="h-[18px] w-[18px] xxs:h-4 xxs:w-4 opacity-90" aria-hidden="true" />
                     <span>{label}</span>
                   </button>
                 ))}
@@ -264,14 +264,14 @@ export default function Skills() {
               <div className="w-full max-w-md">
                 <label className="sr-only" htmlFor="skill-search">Search skills</label>
                 <div className="relative">
-                  <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true" />
+                  <Search className="absolute left-4 xxs:left-3.5 top-1/2 -translate-y-1/2 h-[18px] w-[18px] xxs:h-4 xxs:w-4 text-slate-400" aria-hidden="true" />
                   <input
                     id="skill-search"
                     type="search"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search a skill (e.g., Next.js, PHP)"
-                    className="w-full rounded-2xl border border-slate-700/60 bg-slate-950/40 py-3 pl-11 pr-4 text-base text-slate-100 placeholder:text-slate-400 shadow-lg shadow-black/20 backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/80"
+                    className="w-full rounded-2xl border border-slate-700/60 bg-slate-950/40 py-3 xxs:py-2.5 pl-11 xxs:pl-10 pr-4 text-base xxs:text-sm text-slate-100 placeholder:text-slate-400 shadow-lg shadow-black/20 backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/80"
                   />
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function Skills() {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-sm font-semibold tracking-wide text-slate-300">Skill spotlight</p>
-                      <h3 className="mt-2 text-3xl font-bold text-white">{spotlight?.name ?? '—'}</h3>
+                      <h3 className="mt-2 text-3xl xxs:text-2xl font-bold text-white">{spotlight?.name ?? '—'}</h3>
                       <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-900/40 px-3 py-1 text-sm font-semibold text-slate-200">
                         <span className="h-2 w-2 rounded-full bg-amber-400"></span>
                         <span>{spotlight?.category ?? ''}</span>
@@ -347,7 +347,7 @@ export default function Skills() {
                       <div className="relative">
                         <div className="flex items-start justify-between gap-3">
                           <div>
-                            <h4 className="text-lg font-bold text-white transition-colors group-hover:text-amber-300">
+                            <h4 className="text-lg xxs:text-base font-bold text-white transition-colors group-hover:text-amber-300">
                               {tech.name}
                             </h4>
                             <p className="mt-1 text-sm font-semibold text-slate-300">{tech.category}</p>
@@ -388,7 +388,7 @@ export default function Skills() {
               <p className="text-2xl font-bold mb-2 bg-gradient-to-r from-amber-400 to-rose-400 bg-clip-text text-transparent">
                 Years of Experience
               </p>
-              <p className="text-6xl font-bold bg-gradient-to-r from-amber-500 via-rose-500 to-purple-500 bg-clip-text text-transparent animate-pulse-slow">
+              <p className="text-6xl xxs:text-5xl font-bold bg-gradient-to-r from-amber-500 via-rose-500 to-purple-500 bg-clip-text text-transparent animate-pulse-slow">
                 3+
               </p>
             </div>

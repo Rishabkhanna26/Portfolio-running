@@ -26,19 +26,19 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <nav className="space-y-2">
-                <Link href="/#home" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
+                <Link href="/#home" className="inline-flex min-h-11 items-center text-base xxs:text-sm text-slate-400 transition-colors hover:text-white">
                   Home
                 </Link>
-                <Link href="/#skills" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
+                <Link href="/#skills" className="inline-flex min-h-11 items-center text-base xxs:text-sm text-slate-400 transition-colors hover:text-white">
                   Skills
                 </Link>
-                <Link href="/#experience" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
+                <Link href="/#experience" className="inline-flex min-h-11 items-center text-base xxs:text-sm text-slate-400 transition-colors hover:text-white">
                   Experience
                 </Link>
-                <Link href="/#projects" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
+                <Link href="/#projects" className="inline-flex min-h-11 items-center text-base xxs:text-sm text-slate-400 transition-colors hover:text-white">
                   Projects
                 </Link>
-                <Link href="/#contact" className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white">
+                <Link href="/#contact" className="inline-flex min-h-11 items-center text-base xxs:text-sm text-slate-400 transition-colors hover:text-white">
                   Contact
                 </Link>
               </nav>
@@ -54,16 +54,16 @@ export default function Footer() {
                   className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-white"
                   aria-label="GitHub"
                 >
-                  {Icons.Github ? <Icons.Github size={24} /> : <span />}
+                  {Icons.Github ? <Icons.Github className="h-6 w-6 xxs:h-5 xxs:w-5" aria-hidden="true" /> : <span />}
                 </a>
                 <a
-                  href="https://linkedin.com/in/rishabkhanna26"
+                  href="https://www.linkedin.com/in/rishab-khanna-dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-blue-500"
                   aria-label="LinkedIn"
                 >
-                  {Icons.Linkedin ? <Icons.Linkedin size={24} /> : <span />}
+                  {Icons.Linkedin ? <Icons.Linkedin className="h-6 w-6 xxs:h-5 xxs:w-5" aria-hidden="true" /> : <span />}
                 </a>
                 <a
                   href="https://twitter.com/rishabkhanna26"
@@ -72,7 +72,7 @@ export default function Footer() {
                   className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-blue-400"
                   aria-label="Twitter"
                 >
-                  {Icons.Twitter ? <Icons.Twitter size={24} /> : <span />}
+                  {Icons.Twitter ? <Icons.Twitter className="h-6 w-6 xxs:h-5 xxs:w-5" aria-hidden="true" /> : <span />}
                 </a>
                 <a
                   href="https://instagram.com/rishabkhanna26"
@@ -81,24 +81,24 @@ export default function Footer() {
                   className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-pink-500"
                   aria-label="Instagram"
                 >
-                  {Icons.Instagram ? <Icons.Instagram size={24} /> : <span />}
+                  {Icons.Instagram ? <Icons.Instagram className="h-6 w-6 xxs:h-5 xxs:w-5" aria-hidden="true" /> : <span />}
                 </a>
               </div>
               <a
                 href="mailto:rishabkhanna26@gmail.com"
-                className="inline-flex min-h-11 max-w-full items-center gap-2 break-all text-base text-slate-400 transition-colors hover:text-white"
+                className="inline-flex min-h-11 max-w-full items-center gap-2 break-all text-base xxs:text-sm text-slate-400 transition-colors hover:text-white"
               >
-                {Icons.Mail ? <Icons.Mail size={18} /> : <span />}
+                {Icons.Mail ? <Icons.Mail className="h-[18px] w-[18px] xxs:h-4 xxs:w-4" aria-hidden="true" /> : <span />}
                 <span>rishabkhanna26@gmail.com</span>
               </a>
             </div>
           </div>
 
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="flex items-center gap-2 text-base text-slate-400">
-              Built with {Icons.Heart ? <Icons.Heart size={16} className="text-red-500 animate-pulse" /> : <span />} by Rishab Khanna
+            <p className="flex items-center gap-2 text-base xxs:text-sm text-slate-400">
+              Built with {Icons.Heart ? <Icons.Heart className="h-4 w-4 xxs:h-3.5 xxs:w-3.5 text-red-500 animate-pulse" aria-hidden="true" /> : <span />} by Rishab Khanna
             </p>
-            <p className="text-base text-slate-400">
+            <p className="text-base xxs:text-sm text-slate-400">
               © {new Date().getFullYear()} All rights reserved.
             </p>
           </div>
@@ -107,10 +107,10 @@ export default function Footer() {
 
       <button
         onClick={scrollToTop}
-        className="absolute bottom-8 right-8 w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+        className="absolute bottom-8 right-8 w-12 h-12 xxs:w-10 xxs:h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
         aria-label="Scroll to top"
       >
-  {Icons.ArrowUp ? <Icons.ArrowUp size={24} /> : <span />}
+  {Icons.ArrowUp ? <Icons.ArrowUp className="h-6 w-6 xxs:h-5 xxs:w-5" aria-hidden="true" /> : <span />}
       </button>
     </footer>
   );

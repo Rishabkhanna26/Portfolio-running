@@ -52,7 +52,7 @@ export default function Experience() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section id="experience" className="py-20 bg-slate-50 relative overflow-hidden">
+    <section id="experience" className="py-20 xxs:py-16 bg-slate-50 relative overflow-hidden">
       <div className="hidden lg:block absolute top-0 left-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
       <div className="hidden lg:block absolute top-0 right-0 w-96 h-96 bg-amber-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       <div className="hidden lg:block absolute bottom-0 left-1/3 w-96 h-96 bg-rose-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
@@ -65,10 +65,10 @@ export default function Experience() {
                 JOURNEY
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-rose-600 to-amber-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl xxs:text-3xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-rose-600 to-amber-600 bg-clip-text text-transparent">
               Experience Timeline
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xl xxs:text-lg text-slate-600 max-w-2xl mx-auto">
               A progressive journey of growth, innovation, and delivering excellence
             </p>
           </div>
@@ -97,12 +97,12 @@ export default function Experience() {
                         <span className="px-4 py-1 bg-gradient-to-r from-slate-100 to-slate-200 text-slate-700 text-base font-bold rounded-full">
                           {exp.type}
                         </span>
-                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${exp.color} p-2.5 transform group-hover:rotate-12 transition-all duration-300 shadow-lg`}>
+                        <div className={`w-12 h-12 xxs:w-10 xxs:h-10 rounded-xl bg-gradient-to-br ${exp.color} p-2.5 xxs:p-2 transform group-hover:rotate-12 transition-all duration-300 shadow-lg`}>
                           <Briefcase className="w-full h-full text-white" />
                         </div>
                       </div>
 
-                      <h3 className={`text-2xl font-bold mb-2 transition-all duration-300 ${
+                      <h3 className={`text-2xl xxs:text-xl font-bold mb-2 transition-all duration-300 ${
                         activeIndex === index
                           ? 'bg-gradient-to-r from-purple-600 to-rose-600 bg-clip-text text-transparent'
                           : 'text-slate-900'
@@ -119,7 +119,7 @@ export default function Experience() {
                         </p>
                       </div>
 
-                      <p className="text-slate-600 leading-relaxed mb-6">
+                      <p className="text-slate-600 leading-relaxed mb-6 xxs:text-sm">
                         {exp.description}
                       </p>
 
@@ -144,9 +144,9 @@ export default function Experience() {
                           ? 'text-purple-600'
                           : 'text-slate-500'
                       }`}>
-                        <TrendingUp size={18} />
+                        <TrendingUp className="h-[18px] w-[18px] xxs:h-4 xxs:w-4" aria-hidden="true" />
                         <span>Impact & Growth</span>
-                        <Sparkles size={18} className="ml-auto animate-pulse-slow" />
+                        <Sparkles className="ml-auto h-[18px] w-[18px] xxs:h-4 xxs:w-4 animate-pulse-slow" aria-hidden="true" />
                       </div>
                     </div>
                   </div>
@@ -175,17 +175,17 @@ export default function Experience() {
             <div className="inline-flex flex-wrap items-center justify-center gap-8 p-8 bg-gradient-to-br from-white to-purple-50 rounded-3xl shadow-2xl border-2 border-purple-200">
               <div className="text-center">
                 <p className="mb-1 text-base font-semibold text-slate-600">Projects Completed</p>
-                <p className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-rose-600 bg-clip-text text-transparent">20+</p>
+                <p className="text-4xl xxs:text-3xl font-bold bg-gradient-to-r from-purple-600 to-rose-600 bg-clip-text text-transparent">20+</p>
               </div>
               <div className="w-px h-16 bg-gradient-to-b from-transparent via-purple-300 to-transparent hidden sm:block"></div>
               <div className="text-center">
                 <p className="mb-1 text-base font-semibold text-slate-600">On Time Delivery</p>
-                <p className="text-4xl font-bold bg-gradient-to-r from-rose-600 to-amber-600 bg-clip-text text-transparent">99%</p>
+                <p className="text-4xl xxs:text-3xl font-bold bg-gradient-to-r from-rose-600 to-amber-600 bg-clip-text text-transparent">99%</p>
               </div>
               <div className="w-px h-16 bg-gradient-to-b from-transparent via-rose-300 to-transparent hidden sm:block"></div>
               <div className="text-center">
                 <p className="mb-1 text-base font-semibold text-slate-600">Client Satisfaction Rate</p>
-                <p className="text-4xl font-bold bg-gradient-to-r from-amber-600 to-purple-600 bg-clip-text text-transparent">100%</p>
+                <p className="text-4xl xxs:text-3xl font-bold bg-gradient-to-r from-amber-600 to-purple-600 bg-clip-text text-transparent">100%</p>
               </div>
             </div>
           </div>

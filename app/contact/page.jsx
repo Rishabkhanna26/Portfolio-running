@@ -15,23 +15,23 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <MarketingShell>
-      <section className="futuristic-hero px-4 py-10 sm:px-6 sm:py-16">
+      <section className="futuristic-hero px-4 py-10 xxs:py-8 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-4xl">
-          <h1 className="break-words text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+          <h1 className="break-words text-2xl xxs:text-xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             Contact me to build your automation workflow.
           </h1>
-          <p className="mt-4 break-words text-base leading-8 text-slate-300 sm:text-lg">
+          <p className="mt-4 break-words text-base xxs:text-sm leading-8 text-slate-300 sm:text-lg">
             Share your current lead process, response delays, and follow-up bottlenecks. I will map a practical automation plan that fits
             your team size and sales cycle.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <Link href="/services/whatsapp-automation" className="inline-flex min-h-11 items-center rounded-lg border border-slate-700 px-4 py-2 text-base font-medium text-slate-200 hover:border-slate-500 hover:text-white">
+            <Link href="/services/whatsapp-automation" className="inline-flex min-h-11 items-center rounded-lg border border-slate-700 px-4 py-2 text-base xxs:text-sm font-medium text-slate-200 hover:border-slate-500 hover:text-white">
               WhatsApp Automation
             </Link>
-            <Link href="/services/ai-chatbots" className="inline-flex min-h-11 items-center rounded-lg border border-slate-700 px-4 py-2 text-base font-medium text-slate-200 hover:border-slate-500 hover:text-white">
+            <Link href="/services/ai-chatbots" className="inline-flex min-h-11 items-center rounded-lg border border-slate-700 px-4 py-2 text-base xxs:text-sm font-medium text-slate-200 hover:border-slate-500 hover:text-white">
               AI Chatbots
             </Link>
-            <Link href="/services/lead-generation" className="inline-flex min-h-11 items-center rounded-lg border border-slate-700 px-4 py-2 text-base font-medium text-slate-200 hover:border-slate-500 hover:text-white">
+            <Link href="/services/lead-generation" className="inline-flex min-h-11 items-center rounded-lg border border-slate-700 px-4 py-2 text-base xxs:text-sm font-medium text-slate-200 hover:border-slate-500 hover:text-white">
               Lead Generation
             </Link>
           </div>

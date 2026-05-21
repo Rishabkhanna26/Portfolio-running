@@ -62,7 +62,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"
+      className="py-20 xxs:py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div ref={ref} className="max-w-5xl mx-auto">
@@ -73,8 +73,8 @@ export default function Contact() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            <h2 className="text-4xl xxs:text-3xl md:text-5xl font-bold mb-4">Get In Touch</h2>
+            <p className="text-xl xxs:text-lg text-slate-300 max-w-2xl mx-auto">
               Have a project in mind? Let&apos;s discuss how we can work
               together
             </p>
@@ -89,18 +89,18 @@ export default function Contact() {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl xxs:text-xl font-bold mb-6">Contact Information</h3>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    {Icons.Mail ? <Icons.Mail size={24} /> : <span />}
+                    <div className="w-12 h-12 xxs:w-10 xxs:h-10 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    {Icons.Mail ? <Icons.Mail className="h-6 w-6 xxs:h-5 xxs:w-5" aria-hidden="true" /> : <span />}
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 text-slate-200">Email</h4>
                     <a
                       href="mailto:rishabkhanna26@gmail.com"
-                      className="inline-flex min-h-11 max-w-full items-center break-all text-base text-blue-400 transition-colors hover:text-blue-300"
+                      className="inline-flex min-h-11 max-w-full items-center break-all text-base xxs:text-sm text-blue-400 transition-colors hover:text-blue-300"
                     >
                       rishabkhanna26@gmail.com
                     </a>
@@ -108,20 +108,20 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    {Icons.MapPin ? <Icons.MapPin size={24} /> : <span />}
+                    <div className="w-12 h-12 xxs:w-10 xxs:h-10 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    {Icons.MapPin ? <Icons.MapPin className="h-6 w-6 xxs:h-5 xxs:w-5" aria-hidden="true" /> : <span />}
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 text-slate-200">
                       Location
                     </h4>
-                    <p className="text-slate-300">Jalandhar, Punjab, India</p>
+                    <p className="text-slate-300 xxs:text-sm">Jalandhar, Punjab, India</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    {Icons.Calendar ? <Icons.Calendar size={24} /> : <span />}
+                  <div className="w-12 h-12 xxs:w-10 xxs:h-10 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    {Icons.Calendar ? <Icons.Calendar className="h-6 w-6 xxs:h-5 xxs:w-5" aria-hidden="true" /> : <span />}
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 text-slate-200">
@@ -131,7 +131,7 @@ export default function Contact() {
                       href={calendlyMeetingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-11 items-center text-base text-blue-400 transition-colors hover:text-blue-300"
+                      className="inline-flex min-h-11 items-center text-base xxs:text-sm text-blue-400 transition-colors hover:text-blue-300"
                     >
                       Book a direct meeting on Calendly
                     </a>
@@ -146,19 +146,19 @@ export default function Contact() {
                 <div className="space-y-2">
                   <Link
                     href="/#skills"
-                    className="inline-flex min-h-11 items-center text-base text-blue-400 transition-colors hover:text-blue-300"
+                    className="inline-flex min-h-11 items-center text-base xxs:text-sm text-blue-400 transition-colors hover:text-blue-300"
                   >
                     View Skills
                   </Link>
                   <Link
                     href="/#experience"
-                    className="inline-flex min-h-11 items-center text-base text-blue-400 transition-colors hover:text-blue-300"
+                    className="inline-flex min-h-11 items-center text-base xxs:text-sm text-blue-400 transition-colors hover:text-blue-300"
                   >
                     Experience
                   </Link>
                   <Link
                     href="/#projects"
-                    className="inline-flex min-h-11 items-center text-base text-blue-400 transition-colors hover:text-blue-300"
+                    className="inline-flex min-h-11 items-center text-base xxs:text-sm text-blue-400 transition-colors hover:text-blue-300"
                   >
                     Projects
                   </Link>
@@ -178,7 +178,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-2 block text-base font-medium text-slate-300"
+                    className="mb-2 block text-base xxs:text-sm font-medium text-slate-300"
                   >
                     Your Name
                   </label>
@@ -189,7 +189,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base xxs:text-sm text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                     placeholder="John Doe"
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-base font-medium text-slate-300"
+                    className="mb-2 block text-base xxs:text-sm font-medium text-slate-300"
                   >
                     Your Email
                   </label>
@@ -208,7 +208,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base xxs:text-sm text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -216,7 +216,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="mb-2 block text-base font-medium text-slate-300"
+                    className="mb-2 block text-base xxs:text-sm font-medium text-slate-300"
                   >
                     Message
                   </label>
@@ -227,7 +227,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full resize-none rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
+                    className="w-full resize-none rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-base xxs:text-sm text-white placeholder-slate-500 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -235,7 +235,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitted || isLoading}
-                  className="flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/50 disabled:cursor-not-allowed disabled:opacity-50 disabled:transform-none"
+                  className="flex min-h-12 xxs:min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 xxs:px-5 py-3 text-base xxs:text-sm font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/50 disabled:cursor-not-allowed disabled:opacity-50 disabled:transform-none"
                 >
                   {isLoading ? (
                     <>
@@ -244,12 +244,12 @@ export default function Contact() {
                     </>
                   ) : isSubmitted ? (
                     <>
-                      {Icons.Check ? <Icons.Check size={20} /> : <span />}
+                      {Icons.Check ? <Icons.Check className="h-5 w-5 xxs:h-4 xxs:w-4" aria-hidden="true" /> : <span />}
                       Message Sent!
                     </>
                   ) : (
                     <>
-                      {Icons.Send ? <Icons.Send size={20} /> : <span />}
+                      {Icons.Send ? <Icons.Send className="h-5 w-5 xxs:h-4 xxs:w-4" aria-hidden="true" /> : <span />}
                       Send Message
                     </>
                   )}

@@ -67,7 +67,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+    <section id="services" className="py-20 xxs:py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
       <div className="hidden lg:block absolute top-10 left-20 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -82,10 +82,10 @@ export default function Services() {
                 WHAT I OFFER
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-amber-400 to-rose-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl xxs:text-3xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-amber-400 to-rose-400 bg-clip-text text-transparent">
               Premium Services
             </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            <p className="text-xl xxs:text-lg text-slate-300 max-w-2xl mx-auto">
               Comprehensive solutions designed to elevate your business and drive measurable results
             </p>
           </div>
@@ -117,13 +117,13 @@ export default function Services() {
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-amber-600/10 to-rose-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                     <div className="relative z-10">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-3.5 mb-6 shadow-lg transition-all duration-500 ${
+                      <div className={`w-16 h-16 xxs:w-14 xxs:h-14 rounded-2xl bg-gradient-to-br ${service.color} p-3.5 xxs:p-3 mb-6 shadow-lg transition-all duration-500 ${
                         isHovered ? 'scale-110 rotate-6' : ''
                       } ${isClicked ? 'scale-125 rotate-12' : ''}`}>
                         <Icon className="w-full h-full text-white" />
                       </div>
 
-                      <h3 className={`text-2xl font-bold mb-4 transition-all duration-300 ${
+                      <h3 className={`text-2xl xxs:text-xl font-bold mb-4 transition-all duration-300 ${
                         isClicked
                           ? 'bg-gradient-to-r from-amber-400 to-rose-400 bg-clip-text text-transparent'
                           : 'text-white group-hover:text-purple-300'
@@ -131,7 +131,7 @@ export default function Services() {
                         {service.title}
                       </h3>
 
-                      <p className="text-base text-slate-300 leading-relaxed mb-6 group-hover:text-slate-200 transition-colors">
+                      <p className="text-base xxs:text-sm text-slate-300 leading-relaxed mb-6 group-hover:text-slate-200 transition-colors">
                         {service.description}
                       </p>
 
@@ -142,7 +142,7 @@ export default function Services() {
                         {service.features.map((feature, i) => (
                           <div
                             key={i}
-                            className="flex items-center gap-3 text-base transition-all duration-300"
+                            className="flex items-center gap-3 text-base xxs:text-sm transition-all duration-300"
                             style={{ transitionDelay: `${i * 50}ms` }}
                           >
                             <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
@@ -154,12 +154,12 @@ export default function Services() {
                       {!isClicked && (
                         <div className="mt-6 pt-6 border-t border-slate-700">
                           {service.href ? (
-                            <Link href={service.href} className="inline-flex min-h-11 items-center gap-2 text-base font-semibold text-purple-400 transition-colors group-hover:text-amber-400">
+                            <Link href={service.href} className="inline-flex min-h-11 items-center gap-2 text-base xxs:text-sm font-semibold text-purple-400 transition-colors group-hover:text-amber-400">
                               Learn More
                               <span className="transform group-hover:translate-x-2 transition-transform">→</span>
                             </Link>
                           ) : (
-                            <button className="inline-flex min-h-11 items-center gap-2 text-base font-semibold text-purple-400 transition-colors group-hover:text-amber-400">
+                            <button className="inline-flex min-h-11 items-center gap-2 text-base xxs:text-sm font-semibold text-purple-400 transition-colors group-hover:text-amber-400">
                               Learn More
                               <span className="transform group-hover:translate-x-2 transition-transform">→</span>
                             </button>
@@ -169,9 +169,16 @@ export default function Services() {
 
                       {isClicked && (
                         <div className="mt-6 pt-6 border-t border-slate-700">
-                          <button className="w-full py-3 px-6 bg-gradient-to-r from-amber-600 to-rose-600 hover:from-amber-500 hover:to-rose-500 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/50">
+                          <a
+                            href="#contact"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="block w-full py-3 xxs:py-2.5 px-6 xxs:px-5 bg-gradient-to-r from-amber-600 to-rose-600 hover:from-amber-500 hover:to-rose-500 rounded-xl text-base xxs:text-sm font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/50"
+                          >
                             Get Started
-                          </button>
+                          </a>
                         </div>
                       )}
                     </div>
@@ -191,12 +198,12 @@ export default function Services() {
             isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}>
             <div className="inline-block p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-3xl border-2 border-purple-500/30 shadow-2xl shadow-purple-500/20">
-              <p className="text-slate-300 mb-4 text-lg">
+              <p className="text-slate-300 mb-4 text-lg xxs:text-base">
                 Need something custom?
               </p>
               <Link
                 href="/#contact"
-                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-amber-600 to-rose-600 px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:from-purple-500 hover:via-amber-500 hover:to-rose-500 shadow-lg hover:shadow-purple-500/50"
+                className="inline-flex min-h-12 xxs:min-h-11 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-amber-600 to-rose-600 px-8 xxs:px-6 py-4 xxs:py-3 text-lg xxs:text-base font-bold transition-all duration-300 transform hover:scale-105 hover:from-purple-500 hover:via-amber-500 hover:to-rose-500 shadow-lg hover:shadow-purple-500/50"
               >
                 Let's Discuss Your Project
               </Link>

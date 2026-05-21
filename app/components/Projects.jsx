@@ -10,11 +10,11 @@ const projectGroups = [
     icon: Bot,
     projects: [
       {
-        title: 'AlgoChat',
-        description: 'AI chatbot product with billing flow, status handling, and real-time notifications.',
-        tags: ['Next.js', 'SaaS', 'AI', 'Automation'],
-        github: 'https://github.com/Rishabkhanna26/Algochat',
-        live: 'https://algoochat.vercel.app'
+        // title: 'AlgoChat',
+        // description: 'AI chatbot product with billing flow, status handling, and real-time notifications.',
+        // tags: ['Next.js', 'SaaS', 'AI', 'Automation'],
+        // github: 'https://github.com/Rishabkhanna26/Algochat',
+        // live: 'https://algoochat.vercel.app'
       },
       {
         title: 'Algoaura Lead Generation Hub',
@@ -24,11 +24,11 @@ const projectGroups = [
         live: 'https://algoaura.in'
       },
       {
-        title: 'Client Mixend',
-        description: 'Client handling dashboard with secure access, task flows, and operational tracking.',
-        tags: ['Next.js', 'Dashboard', 'Security'],
-        github: 'https://github.com/Rishabkhanna26/Client-Mixend',
-        live: 'https://client-handler.vercel.app'
+        // title: 'Client Mixend',
+        // description: 'Client handling dashboard with secure access, task flows, and operational tracking.',
+        // tags: ['Next.js', 'Dashboard', 'Security'],
+        // github: 'https://github.com/Rishabkhanna26/Client-Mixend',
+        // live: 'https://client-handler.vercel.app'
       }
     ]
   },
@@ -39,14 +39,14 @@ const projectGroups = [
     icon: Globe,
     projects: [
       {
-        title: 'Araba Cafe',
+        title: 'cafe coffee',
         description: 'Brand site for a cafe concept with immersive storytelling and menu discovery.',
         tags: ['Next.js', 'React', 'Tailwind'],
         github: 'https://github.com/Rishabkhanna26/araba',
         live: 'https://cafecofee.vercel.app'
       },
       {
-        title: 'Pahadam Ascent',
+        title: 'Apna-ghee',
         description: 'Organic ghee brand experience with story-led landing, trust signals, and conversion flow.',
         tags: ['Next.js', 'React', 'Frontend'],
         github: 'https://github.com/Rishabkhanna26/pahadam-ascent',
@@ -82,7 +82,7 @@ export default function Projects() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+    <section id="projects" className="py-24 xxs:py-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl"></div>
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-amber-500/20 rounded-full blur-3xl"></div>
@@ -93,10 +93,10 @@ export default function Projects() {
             <span className="inline-flex px-4 py-2 rounded-full text-xs font-bold tracking-wider bg-slate-800 border border-slate-700 text-slate-200 mb-4">
               PROJECT SHOWCASE
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-amber-300 via-rose-300 to-purple-300 bg-clip-text text-transparent">
+            <h2 className="text-4xl xxs:text-3xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-amber-300 via-rose-300 to-purple-300 bg-clip-text text-transparent">
               Work by Category
             </h2>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+            <p className="text-lg xxs:text-base text-slate-300 max-w-3xl mx-auto">
               Clear separation of WordPress builds, Next.js products, and automation systems.
             </p>
           </div>
@@ -120,8 +120,8 @@ export default function Projects() {
                       <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${group.gradient} p-3 mb-5`}>
                         <GroupIcon className="w-full h-full text-white" />
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{group.title}</h3>
-                      <p className="text-slate-300 leading-relaxed mb-5">{group.description}</p>
+                      <h3 className="text-2xl xxs:text-xl md:text-3xl font-bold text-white mb-2">{group.title}</h3>
+                      <p className="text-slate-300 xxs:text-sm leading-relaxed mb-5">{group.description}</p>
                       <div className="inline-flex px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-200 text-sm font-semibold">
                         {group.projects.length} Projects
                       </div>
@@ -129,19 +129,18 @@ export default function Projects() {
 
                     <div className="lg:col-span-8 p-6 md:p-8">
                       <div className="grid sm:grid-cols-2 gap-5">
-                        {group.projects.map((project, projectIndex) => (
+                        {group.projects.filter((p) => p.title).map((project, projectIndex) => (
                           <article
                             key={project.title}
                             className="group rounded-2xl border border-slate-700 bg-slate-950/70 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-slate-500"
-                          >
-                            <div className="flex items-start justify-between gap-3 mb-3">
-                              <h4 className="text-lg font-bold text-white leading-tight">{project.title}</h4>
+                          >                            <div className="flex items-start justify-between gap-3 mb-3">
+                              <h4 className="text-lg xxs:text-base font-bold text-white leading-tight">{project.title}</h4>
                               <span className={`text-xs font-bold px-2.5 py-1 rounded-full bg-gradient-to-r ${group.gradient} text-white`}>
                                 {String(projectIndex + 1).padStart(2, '0')}
                               </span>
                             </div>
 
-                            <p className="text-base text-slate-300 leading-relaxed mb-4 min-h-[72px]">
+                            <p className="text-base xxs:text-sm text-slate-300 leading-relaxed mb-4 min-h-[72px]">
                               {project.description}
                             </p>
 
@@ -162,10 +161,10 @@ export default function Projects() {
                                   href={project.github}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-slate-600 px-3 py-2 text-base font-medium text-slate-200 transition-colors hover:border-slate-400 hover:text-white"
+                                  className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-slate-600 px-3 py-2 text-base xxs:text-sm font-medium text-slate-200 transition-colors hover:border-slate-400 hover:text-white"
                                   aria-label="View on GitHub"
                                 >
-                                  <Github size={16} />
+                                  <Github className="h-4 w-4 xxs:h-3.5 xxs:w-3.5" aria-hidden="true" />
                                   Code
                                 </a>
                               )}
@@ -174,10 +173,10 @@ export default function Projects() {
                                   href={project.live}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className={`inline-flex min-h-11 items-center gap-2 rounded-lg bg-gradient-to-r px-3 py-2 text-base font-medium text-white transition-opacity hover:opacity-90 ${group.gradient}`}
+                                  className={`inline-flex min-h-11 items-center gap-2 rounded-lg bg-gradient-to-r px-3 py-2 text-base xxs:text-sm font-medium text-white transition-opacity hover:opacity-90 ${group.gradient}`}
                                   aria-label="View Live Site"
                                 >
-                                  <ExternalLink size={16} />
+                                  <ExternalLink className="h-4 w-4 xxs:h-3.5 xxs:w-3.5" aria-hidden="true" />
                                   Visit Site
                                 </a>
                               )}

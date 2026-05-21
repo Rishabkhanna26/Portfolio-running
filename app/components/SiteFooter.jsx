@@ -15,7 +15,7 @@ export default function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-3">
         <section>
           <h2 className="text-lg font-semibold text-white">Rishab Khanna</h2>
-          <p className="mt-3 text-base leading-7 text-slate-400">
+          <p className="mt-3 text-base xxs:text-sm leading-7 text-slate-400">
             Building WhatsApp automation, AI chatbots, and lead generation systems focused on predictable growth.
           </p>
         </section>
@@ -27,7 +27,7 @@ export default function SiteFooter() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="inline-flex min-h-11 items-center text-base text-slate-400 transition-colors hover:text-white"
+                className="inline-flex min-h-11 items-center text-base xxs:text-sm text-slate-400 transition-colors hover:text-white"
               >
                 {link.label}
               </Link>
@@ -45,16 +45,16 @@ export default function SiteFooter() {
               className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-colors hover:text-white"
               aria-label="GitHub"
             >
-              <Github size={20} />
+              <Github className="h-5 w-5 xxs:h-[18px] xxs:w-[18px]" aria-hidden="true" />
             </a>
             <a
-              href="https://linkedin.com/in/rishabkhanna26"
+              href="https://www.linkedin.com/in/rishab-khanna-dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-colors hover:text-white"
               aria-label="LinkedIn"
             >
-              <Linkedin size={20} />
+              <Linkedin className="h-5 w-5 xxs:h-[18px] xxs:w-[18px]" aria-hidden="true" />
             </a>
             <a
               href="https://twitter.com/rishabkhanna26"
@@ -63,12 +63,12 @@ export default function SiteFooter() {
               className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-slate-400 transition-colors hover:text-white"
               aria-label="Twitter"
             >
-              <Twitter size={20} />
+              <Twitter className="h-5 w-5 xxs:h-[18px] xxs:w-[18px]" aria-hidden="true" />
             </a>
           </div>
           <a
             href="mailto:rishabkhanna26@gmail.com"
-            className="mt-4 inline-flex min-h-11 max-w-full items-center break-all text-base text-slate-400 transition-colors hover:text-white"
+            className="mt-4 inline-flex min-h-11 max-w-full items-center break-all text-base xxs:text-sm text-slate-400 transition-colors hover:text-white"
           >
             rishabkhanna26@gmail.com
           </a>

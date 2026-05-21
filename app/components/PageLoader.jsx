@@ -66,7 +66,7 @@ export default function PageLoader() {
                         ease: "easeInOut",
                       }}
                     >
-                      <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-blue-400 via-cyan-300 to-teal-400 bg-clip-text text-transparent">
+                      <span className="text-4xl xxs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-blue-400 via-cyan-300 to-teal-400 bg-clip-text text-transparent">
                         {letter}
                       </span>
                     </motion.div>
@@ -111,7 +111,7 @@ export default function PageLoader() {
                       repeat: Infinity,
                       delay: i * 0.2,
                     }}
-                    className="w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"
+                    className="w-2 h-2 xxs:w-1.5 xxs:h-1.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"
                   />
                 ))}
               </div>

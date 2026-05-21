@@ -54,7 +54,7 @@ export default function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="text-base font-bold tracking-tight text-white sm:text-lg">
+        <Link href="/" className="text-base xxs:text-sm font-bold tracking-tight text-white sm:text-lg">
           Rishab Khanna
         </Link>
 
@@ -65,7 +65,11 @@ export default function SiteHeader() {
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
         >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
+          {isOpen ? (
+            <X className="h-5 w-5 xxs:h-4 xxs:w-4" aria-hidden="true" />
+          ) : (
+            <Menu className="h-5 w-5 xxs:h-4 xxs:w-4" aria-hidden="true" />
+          )}
         </button>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -93,7 +97,7 @@ export default function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block min-h-11 w-full rounded-lg px-3 py-3 text-base font-medium leading-6 transition-colors ${
+                className={`block min-h-11 w-full rounded-lg px-3 py-3 text-base xxs:text-sm font-medium leading-6 transition-colors ${
                   isActive(pathname, link.href)
                     ? 'bg-slate-800 text-white'
                     : 'text-slate-300 hover:bg-slate-900 hover:text-white'
